@@ -1,0 +1,33 @@
+//Sum of all numbers in an array
+
+//using anonymous function
+
+var num = ["1","2","3","4","5","6"]
+
+    
+let show = function (a) {
+    sum =0;
+    for(i=0;i<a.length;i++)
+    {
+        
+         sum=sum+parseInt(a[i])
+    }
+    return sum;
+};
+
+console.log(show(num));
+
+//printing odd numbers in the array
+
+//using IIFE
+var a = ["1","2","3","4","5","6"];
+
+(function (num) {
+    sum =0;
+    for(i=0;i<a.length;i++)
+    {
+        sum=sum+parseInt(a[i]);
+    }
+    console.log(sum);
+    
+})(a);

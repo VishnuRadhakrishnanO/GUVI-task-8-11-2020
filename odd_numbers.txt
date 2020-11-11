@@ -1,0 +1,38 @@
+//printing odd numbers in the array
+
+//using anonymous function
+
+var num = ["1","2","3","4","5","6"]
+odd =[];
+    
+let show = function (a) {
+    
+    for(i=0;i<a.length;i++)
+    {
+        if(parseInt(a[i])%2!== 0)
+        {
+          odd.push(a[i]);
+        }
+    }
+    return odd;
+};
+
+show(num);
+
+
+//using IIFE
+
+var a = ["1","2","3","4","5","6"];
+
+(function (num) {
+    odd =[];
+    for(i=0;i<num.length;i++)
+    {
+        if(parseInt(num[i])%2!== 0)
+        {
+          odd.push(num[i]);
+        }
+    }
+    console.log(odd);
+    
+})(a);
