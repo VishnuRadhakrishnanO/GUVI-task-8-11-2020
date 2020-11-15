@@ -1,0 +1,38 @@
+//Rotate an array by k times and return the rotated array
+
+//using anonymous function
+
+
+
+var arr1 = ['A', 'B', 'c', 'd', 'e']; 
+    
+let show = function (a,k) {
+    
+ for (var i = 0; i < k; i++) {
+        a.unshift(a.pop());
+    }
+
+console.log(a)
+    return a;
+   
+    };
+
+show(arr1,2);
+
+//using IIFE
+
+
+var arr1 = ['A', 'B', 'c', 'd', 'e']; 
+    
+    
+
+(function (a,k) {
+ for (var i = 0; i < k; i++) {
+        a.unshift(a.pop());
+    }
+
+console.log(a)
+    return a;
+
+    
+})(arr1,2);

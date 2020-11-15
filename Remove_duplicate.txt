@@ -1,0 +1,35 @@
+//Remove duplicates from an array
+
+//using anonymous function
+
+var arr2 = [-5, 3, 6, 12, 15, 15]; 
+
+var arr1 = ['A', 'B', 'A', 'C', 'B']; 
+    
+let show = function (a) {
+    
+    let newarr = [...new Set(a)];
+console.log(newarr)
+
+return true;
+   
+    };
+
+show(arr2);
+
+//using IIFE
+
+
+var arr2 = [-5, 3, 6, 12, 15, 15]; 
+
+var arr1 = ['A', 'B', 'A', 'C', 'B']; 
+    
+    
+
+(function (a) {
+   let newarr = [...new Set(a)];
+console.log(newarr)
+
+return true;
+    
+})(arr2);

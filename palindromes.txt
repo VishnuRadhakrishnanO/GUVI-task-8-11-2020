@@ -1,0 +1,50 @@
+//Return all the palindromes in an array
+
+//using anonymous function
+
+var words = ['viicc', 'cecarar', 'honda','ada','malayalam']; 
+
+    
+let show = function (a) {
+    
+for(i=0;i<a.length;i++) 
+     
+{   
+ 
+     rever =a[i].split("").reverse().join("");
+   
+    if(rever === a[i])
+    {
+    console.log(a[i]);
+
+    }   
+     
+     
+}
+     return true
+    };
+
+show(words);
+
+
+//using IIFE
+var words = ['viicc', 'cecarar', 'honda','ada','malayalam'];
+    
+
+(function (a) {
+ for(i=0;i<a.length;i++) 
+     
+{   
+ rever =a[i].split("").reverse().join("");
+   
+    if(rever === a[i])
+    {
+    console.log(a[i]);
+
+    }   
+     
+}   
+     
+     return true;
+    
+})(words);

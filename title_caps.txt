@@ -1,0 +1,30 @@
+//Convert all the strings to title caps in a string array 
+
+//using anonymous function (using map)
+
+
+
+var arr1 = ["cdef","smith","vishnu"]; 
+    
+let show = function (a) {
+    
+ a=a.map(([firstChar,...rest])=>firstChar.toUpperCase()+rest.join("").toLowerCase())
+console.log(a)
+   
+    };
+
+show(arr1);
+
+//using IIFE(using map)
+
+
+var arr1 = ["cdef","smith","vishnu"]; 
+    
+    
+
+(function (a) {
+    
+ a=a.map(([firstChar,...rest])=>firstChar.toUpperCase()+rest.join("").toLowerCase())
+console.log(a);
+
+})(arr1);

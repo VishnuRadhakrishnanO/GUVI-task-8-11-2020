@@ -1,0 +1,67 @@
+//Return all the prime numbers in an array 
+
+//using anonymous function
+
+var num = ["1","2","3","4","5","6","12","111111","10","7","11"]
+  arr=[];
+    
+let show = function (a) {
+for(i=0;i<a.length;i++) 
+     
+{   
+     c=0;
+   for(j=2;j<parseInt(a[i]);j++)
+     {
+
+     if(parseInt(a[i])%j===0)
+     {
+         c++;
+     }
+     
+     } 
+     
+     
+     if(c<1&&parseInt(a[i])!=1){
+         arr.push(a[i]);
+     }
+    
+     
+}   
+     
+     return arr
+     
+    };
+
+console.log(show(num));
+
+//using IIFE
+var num = ["1","2","3","4","5","6","12","111111","10","7","11"]
+  arr=[];
+    
+
+(function (a) {
+ for(i=0;i<a.length;i++) 
+     
+{   
+     c=0;
+   for(j=1;j< Math.sqrt(parseInt(a[i]))+1;j++)
+     {
+
+     if(parseInt(a[i])%j===0)
+     {
+         c++;
+     }
+     
+     } 
+     
+     
+     if(c<2&&parseInt(a[i])!=1||parseInt(a[i])==2){
+         arr.push(a[i]);
+     }
+    
+     
+}   
+     
+     return arr
+    
+})(num);

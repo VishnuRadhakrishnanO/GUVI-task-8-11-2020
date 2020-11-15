@@ -1,0 +1,71 @@
+//Return median of two sorted arrays of same size 
+
+//using anonymous function
+
+var arr2 = [-5, 3, 6, 12, 15]; 
+
+var arr1 = [-12, -10, -6, -3, 4, 10]; 
+    
+let show = function (a1,a2) {
+    
+    var arr=a1.concat(a2);
+    arr.sort(function(a, b){return a-b});
+
+if(arr.length%2===0)
+
+{
+     console.log(arr)
+    let c=arr.length/2;
+    console.log((arr[c]+arr[c-1])/2);
+    
+    
+}
+
+else
+
+{
+    console.log(arr)
+    c=(arr.length-1)/2
+    console.log(arr[c])
+    
+}
+
+return true;
+   
+    };
+
+show(arr1,arr2);
+//using IIFE
+
+var arr2 = [-5, 3, 6, 12, 15]; 
+
+var arr1 = [-12, -10, -6, -3, 4, 10]; 
+    
+    
+
+(function (a1,a2) {
+    var arr=a1.concat(a2);
+    arr.sort(function(a, b){return a-b});
+
+if(arr.length%2===0)
+
+{
+     console.log(arr)
+    let c=arr.length/2;
+    console.log((arr[c]+arr[c-1])/2);
+    
+    
+}
+
+else
+
+{
+    console.log(arr)
+    c=(arr.length-1)/2
+    console.log(arr[c])
+    
+}
+
+     return true;
+    
+})(arr1,arr2);
